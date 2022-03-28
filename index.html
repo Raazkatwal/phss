@@ -27,7 +27,8 @@
           */
         }
         body{
-          background-color: var(--primary-color);          
+          background-color: var(--primary-color);   
+          transition: .5s;       
         }
         #myBtn {
             display: none; /* Hidden by default */
@@ -143,7 +144,6 @@
         }
         .log_btn{
           background-color:var(--accent-color);
-          cursor: pointer;
           outline: none;
           border: none;
           width: 10rem;
@@ -151,6 +151,9 @@
           border-radius: 5rem;
           color: var(--primary-color);
           text-transform: uppercase;
+        }
+        .log_btn:hover{
+          cursor: not-allowed;
         }
 
 
@@ -500,7 +503,7 @@
           <li><a href="#"class="nohover"><i class="fa fa-angle-right"></i> About us</a></li>
           <li><a href="#"class="nohover"><i class="fa fa-angle-right"></i> Gallery</a></li>
           <li><a href="#"class="nohover"><i class="fa fa-angle-right"></i> Events</a></li>
-          <li><a href="#"class="nohover"><i class="fa fa-angle-right"></i> Contact</a></li>
+          <li><a href="contact.html"class="nohover"><i class="fa fa-angle-right"></i> Contact</a></li>
         </ul>
       </div>
       <div class="footer-subscribe">
