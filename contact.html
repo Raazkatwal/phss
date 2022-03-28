@@ -250,42 +250,60 @@
         .footer-credits{
           text-align: center;
         }
-        @media screen and (max-width:998px) {
-          html{
-            font-size: 55%;
-          }
-          .services{
-            grid-template-columns: auto;
-          }
-          .navbar{
-            display: none;
-          }
-          .carousel{
-            height: auto;
-          }
-          .services i{
-            text-align: right;
-          }
-          .services_heading,.services p{
-            padding-left: 2rem;
-          }
-          .nohover{
-            pointer-events: none;
-          }
-          .principal_info{
-            margin: auto;
-            width: 90%;
-          }
-          .principal_info .more{
-            margin-bottom: 1rem;
-          }
-          .footer-contents{
-            display: none;
-          }
-          .main_info{
-            width: 90%;
-            margin: auto;
-          }
+        .container{
+          width: 100%;
+          display: grid;
+          margin: auto;
+          grid-template-columns: 55% 50%;
+        }
+        .contactform{
+    		width: 80%;
+    		padding: 2rem;
+    		background: white;
+        }
+        .contactform h2{
+          font-size: 30px;
+          color: #333;
+          font-weight: 500;
+        }
+        .contactform .inputbox{
+          position: relative;
+          width: 100%;
+          margin-top: 10px;
+        }
+        .contactform .inputbox input,
+        .contactform .inputbox textarea{
+          width: 100%;
+          padding: 5px 0;
+          font-size: 16px;
+          margin: 10px 0;
+          border: none;
+          border-bottom: 2px solid #333;
+          outline: none;
+          resize: none;
+        }
+        .contactform .inputbox span{
+          position: absolute;
+          left: 0;
+          padding: 5px 0;
+          font-size: 16px;
+          margin: 10px 0;
+          pointer-events: none;
+          transition: 0.5s;
+          color: #666;
+        }
+        .contactform .inputbox input:focus ~ span,
+        .contactform .inputbox input:valid ~ span,
+        .contactform .inputbox textarea:focus ~ span,
+        .contactform .inputbox textarea:valid ~ span{
+          color: var(--accent-color);
+          font-size: 12px;
+          transform: translateY(-20px);
+        }
+        .contactform .inputbox input[type="submit"]{
+          width: 100px;
+          background: var(--accent-color);
+          color: white;
         }
         </style>
 </head>
@@ -318,6 +336,29 @@
         </ul>
         <span id="change"><i class="fa-solid fa-moon theme-logo"></i></span>
         <input type="button" value="Login" class="log_btn nohover" title="Login">
+    </div>
+    <div class="container">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3571.203139293172!2d87.28009821466128!3d26.481403483315187!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ef740cb01e8963%3A0x3b9d3c928f9112e0!2sPokhariya%20Secondary%20School!5e0!3m2!1sen!2snp!4v1648462568152!5m2!1sen!2snp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div class="contactform">
+        <form>
+          <h2>Send Message</h2>
+          <div class="inputbox">
+            <input type="text" name="" required>
+            <span>Full Name</span>
+          </div>
+          <div class="inputbox">
+            <input type="text" name="" required>
+            <span>Email</span>
+          </div>
+          <div class="inputbox">
+            <textarea required="required"></textarea>
+            <span>Type your Message...</span>
+          </div>
+          <div class="inputbox">
+            <input type="submit" name="" value="Send">
+          </div>
+        </form>
+      </div>
     </div>
     <div class="footer">
       <div class="footer-contents">
