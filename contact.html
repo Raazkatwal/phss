@@ -250,6 +250,9 @@
         .footer-credits{
           text-align: center;
         }
+        iframe{
+          box-shadow: .8rem .8rem .5rem 0px rgba(0,0,0,.4);
+        }
         .container{
           width: 100%;
           display: grid;
@@ -309,6 +312,26 @@
           background: var(--accent-color);
           color: white;
         }
+        .contactinfo{
+          display: flex;
+          margin-bottom: 15rem;
+        }
+        .infos{
+          flex: 1;
+          text-align: center;
+          font-size: 2.5rem;
+          font-weight: bold;
+          color: var(--secondary-color);
+        }
+        .infos > span{
+          color: #555;
+          font-size: 1.5rem;
+          font-weight: 400;
+        }
+        .infos > i{
+          color: var(--accent-color);
+          font-size: 2.5rem;
+        }
         </style>
 </head>
 <body>
@@ -363,6 +386,11 @@
           </div>
         </form>
       </div>
+    </div>
+    <div class="contactinfo">
+      <div class="infos"><i class="fa-solid fa-map"></i> Address<br><span>Biratnagar-3, Morang</span></div>
+      <div class="infos"><i class="fa-solid fa-envelope"></i> Email <br><span>pokhariyaschoolbrt@gmail.com</span></div>
+      <div class="infos"><i class="fa-solid fa-phone"></i> Phone <br><span>021-460215</span></div>
     </div>
     <div class="footer">
       <div class="footer-contents">
