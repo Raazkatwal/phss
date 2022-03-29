@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Facilities | Shree Pokhariya Secondary School</title>
+        <link rel="icon" href="img/sch-logo.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            html{
+              font-size: 62.5%;
+              font-family: ubuntu;
+              /* it makes 1rem=10px=62.5%. By defalut 1rem=16px=100% and 62.5%=10px */
+              /* h1=3.2rem
+              h2=2.4rem
+              h3=1.8rem
+              h4=1.6rem
+              h5=1.3rem
+              h6=1rem
+              p=1.6rem
+              */
+            }
+            body{
+              background-color: var(--primary-color);      
+              transition: .5s;    
+            }
+            #myBtn {
+                display: none; /* Hidden by default */
+                position: fixed; /* Fixed/sticky position */
+                bottom: 2rem; /* Place the button at the bottom of the page */
+                right: 3rem; /* Place the button 3rem from the right */
+                z-index: 9999; /* Make sure it does not overlap */
+                border: none; /* remove borders */
+                outline: none; /* remove outline */
+                background-color:var(--accent-color); /* Set a background color */
+                color: var(--primary-color); /* Text color */
+                cursor: pointer; /* Add a mouse pointer on hover */
+                padding: 1.5rem; /* Some padding */
+                border-radius: 100%; /* Rounded corners */
+                width: 5rem;
+              }
+            #myBtn:hover {
+              background-color: #555; /* Add a dark-grey background on hover */
+            }
+            .navbar{
+                font-weight: 600;
+                text-transform: uppercase;
+                height: 2.5rem;
+                width: 100%;
+                z-index: 999;
+                display: flex;
+                justify-content: space-around;
+                padding: 2rem 0;
+                margin-bottom: .5rem;
+                font-size: 1.6rem;
+            }
+            .navbar ul li{
+                margin: 0 2.5rem;
+                list-style: none;
+                display: inline-block;
+                position: relative;
+                cursor: pointer;
+            }
+            /* The container <div> - needed to position the dropdown content */
+            .dropdown {
+            position: relative;
+            display: inline-block;
+            }
+    
+            /* Dropdown Content (Hidden by Default) */
+            .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: var(--primary-color);
+            min-width: 16rem;
+            width: max-content;
+            border-radius: .5rem;
+            box-shadow: 0rem .8rem 1.6rem 0rem rgba(0,0,0,0.2);
+            z-index: 1;
+            }
+    
+            /* Links inside the dropdown */
+            .dropdown-content a {
+            color: var(--secondary-color);
+            padding: 1.2rem 1.6rem;
+            font-weight: normal;
+            text-decoration: none;
+            display: block;
+            border-radius: .5rem;
+            }
+    
+            /* Change color of dropdown links on hover */
+            .dropdown-content a:hover {background-color:var(--accent-color); color: var(--secondary-color);}
+    
+            /* Show the dropdown menu on hover */
+            .dropdown:hover .dropdown-content {display: block;}
+    
+            /* Change the background color of the dropdown button when the dropdown content is shown */
+            .dropdown:hover .dropbtn {background-color:var(--accent-color); color: var(--primary-color);}
+            .btn{
+                background-color: var(--primary-color);
+                color: var(--secondary-color);
+                width: auto;
+                height: 3.5rem;
+                cursor: pointer;
+                outline: none;
+                border: none;
+                border-radius: .5rem;
+                transition: .3s;
+                font-size: 1.6rem;
+                padding: 0 1rem 0 1rem;
+            }
+            .btn:hover{
+              background-color:var(--accent-color);
+              color: var(--primary-color);
+            }
+            .log_btn{
+              background-color:var(--accent-color);
+              outline: none;
+              border: none;
+              width: 10rem;
+              height: 4.5rem;
+              border-radius: 5rem;
+              color: var(--primary-color);
+              text-transform: uppercase;
+            }
+            .log_btn:hover{
+              cursor: not-allowed;
+            }
+    
+    
+            :root{
+              --primary-color:white;
+              --secondary-color: #151515;
+              --accent-color:#00B16A;
+            }
+            .dark-theme{
+              --primary-color: #151515;
+              --secondary-color: white;
+            }
+            .fa-sun{
+              color: var(--secondary-color);
+            }
+            .fa-moon{
+              color: var(--secondary-color);
+            }
+            .fa-solid{
+              font-size: 2rem;
+            }
+            #change{
+              cursor: pointer;
+            }
+            .footer{
+              padding-top: 2.5rem;
+              background-color: #333333;
+              font-size: 1.6rem;
+            }
+            .footer-contents{
+              display: grid;
+              grid-template-columns: 38% 30% 32%;
+              color: white;
+            }
+            .footer_sch_info > .fa-solid{
+              color: var(--accent-color);
+            }
+            .footer_sch_info i{
+              padding: 0rem 1rem 1rem 2rem;
+            }
+            .footer_sch_info{
+              margin-left: 10%;
+            }
+            .divider-2{
+              width: 95%;
+              display: block;
+              background-color:rgb(143, 143, 143);
+              height: .1rem;
+              margin: auto;
+              
+            }
+            .footer-divider{
+              width: 15%;
+              display: block;
+              background-color:var(--accent-color);
+              height: .2rem;
+              margin-bottom: 2.5rem;
+            }
+            .footer-nav ul li , .footer-nav ul li a{
+              padding-bottom: 1.5rem;
+              cursor: pointer;
+              transition: .2s;
+              text-decoration: none;
+              color: white;
+            }
+            .footer-nav ul li a:hover{
+              color: var(--accent-color);
+            }
+            .footer-mail{
+              height: 5rem;
+              width: 70%;
+              padding: 0rem 5rem 0rem 2rem;
+            }
+            .footer-mail:focus{
+              outline: none;
+            }
+            .footer-btn{
+              border: none;
+              background-color: var(--accent-color);
+              height: 5rem;
+              width: 5rem;
+              font-size: larger;
+              color: var(--primary-color);
+            }
+            .footer-btn:hover{
+              color: var(--secondary-color);
+              background-color: var(--primary-color);
+            }
+            .social-btns{
+              height: 3.4rem;
+              width: 3.4rem;
+              background: rgba(69, 69, 69, 0.5);
+              text-align: center;
+              margin: 0;
+              padding: 0;
+              border-radius: 100%;
+              color: #fff;
+              border: none;
+              transition: .4s;
+              margin: 1rem 0 1rem 0;
+            }
+            .social-btns:hover{
+              color: var(--accent-color);
+              background-color: white;
+            }
+            .footer-credits{
+              text-align: center;
+            }
+            .container{
+                display: grid;
+                height: 50rem;
+                background: red;
+            }
+            </style>
+    </head>
+    <body>
+        <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa-solid fa-angle-up"></i></button>
+        <div class="navbar">
+            <ul>
+                <li><a href="index.html"><button class="btn">HOME</button></a></li>
+                <div class="dropdown">
+                    <button class="dropbtn btn">ABOUT <i class="fa fa-angle-down"></i></button>
+                    <div class="dropdown-content">
+                      <a href="#">Introduction</a>
+                      <a href="#msg">Message From Principal</a>
+                      <a href="facility.html">Facility</a>
+                    </div>
+                  </div>            
+                <li><a href=""><button class="btn">ADMISSION</button></a></li>
+                <div class="dropdown">
+                    <button class="dropbtn btn">ACTIVITIES <i class="fa fa-angle-down"></i></button>
+                    <div class="dropdown-content">
+                      <a href="#">Events</a>
+                      <a href="#">News</a>
+                    </div>
+                  </div> 
+                <li><a href="contact.html"><button class="btn">CONTACT</button></a></li>
+            </ul>
+            <span id="change"><i class="fa-solid fa-moon theme-logo"></i></span>
+            <input type="button" value="Login" class="log_btn nohover" title="Login">
+        </div>   
+        <div class="container">
+
+        </div>  
+        <div class="footer">
+          <div class="footer-contents">
+          <div class="footer_sch_info">
+            <img src="https://manager.pokhariyaschool.edu.np/uploads/pokhariyaschool/logo/logo.jpg" alt="" width="40%" height="auto"><br><br>
+            <i class="fa-solid fa-phone"></i>Phone: 021-460215<br>
+            <i class="fa-solid fa-envelope"></i>Email: pokhariyaschoolbrt@gmail.com <br>
+            <i class="fa-solid fa-map"></i>Address: Biratnagar-3, Morang <br>
+          </div>
+          <div class="footer-nav">
+            <h1>Useful links</h1>
+            <span class="footer-divider"></span>
+            <ul style="list-style: none;">
+              <li><a href="#"class="nohover"><i class="fa fa-angle-right"></i> Home</a></li>
+              <li><a href="#"class="nohover"><i class="fa fa-angle-right"></i> About us</a></li>
+              <li><a href="#"class="nohover"><i class="fa fa-angle-right"></i> Facilities</a></li>
+              <li><a href="#"class="nohover"><i class="fa fa-angle-right"></i> Events</a></li>
+              <li><a href="contact.html"class="nohover"><i class="fa fa-angle-right"></i> Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-subscribe">
+            <h1>Subscribe Newsletter</h1>
+            <span class="footer-divider"></span>
+            <p style="width: 90%;">Don't miss to subscribe to our news feed, Get the latest updates from us!</p>
+            <form>
+              <input type="email" placeholder="Enter your email" class="footer-mail"><button type="submit" class="footer-btn"><i class="fa fa-envelope"></i></button>
+            </form>      
+          </div>
+          </div>
+          <div class="divider-2"></div>
+          <div class="footer-credits">
+            <div class="credit-btns">
+              <button class="social-btns nohover"><i class="fa-brands fa-facebook-f"></i></button>
+              <button class="social-btns nohover"><i class="fa-brands fa-twitter"></i></button>
+              <button class="social-btns nohover"><i class="fa-brands fa-instagram"></i></button>
+              <button class="social-btns nohover"><i class="fa-brands fa-youtube"></i></button>
+            </div>
+            <div style="color: white;">© Design And Developed By Raaz katwal. All Rights Reserved</div>
+          </div>
+          </div>
+    </body>
+    <script src="script.js"></script>
+    </html></head>
+<body>
+    
+</body>
+</html>
