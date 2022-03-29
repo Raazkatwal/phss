@@ -247,26 +247,56 @@
             }
             .container{
                 display: grid;
-                background: red;
+                width: 90%;
+                margin: auto;
                 grid-template-columns: repeat(3, 1fr);
-                grid-template-rows: .5fr 1fr 1fr 1fr;
-                grid-gap: 1rem;
+                grid-template-rows: 150px 1fr 1fr;
                 place-items: center;
-            }
-            .contents{
-                background: cyan;
-                height: 15rem;
-                width: 100%;
+                margin-bottom: 5rem;
+                grid-row-gap: 2rem;
+                grid-column-gap: 2rem;
             }
             .header{
                 grid-column-start: 1;
                 grid-column-end: 4;
+                height: fit-content;
             }
             .title{
                 font-size: 3.2rem;
+                color: var(--secondary-color);
             }
-            
-            </style>
+            .card{
+                background: var(--primary-color);
+                border: 2px solid var(--accent-color);
+                width: 300px;
+                height: 450px;
+                border-radius: 15px;
+                display: grid;
+                grid-template-rows: 65% 35%;
+                grid-auto-rows: minmax(50px, auto);
+                grid-gap: 1em;
+                margin: auto;
+            }
+            .card-img{
+                margin: auto;
+                width: 90%;
+                height: 90%;
+                border-radius: 15px;
+            }
+            .card-heading{
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-align: center;
+            color: var(--secondary-color);
+            font-size: 1.8rem;
+            }
+            .card-des{
+            text-align: center;
+            font-size: 15px;
+            font-weight: 400;
+            color: #777;
+            }
+        </style>
     </head>
     <body>
         <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa-solid fa-angle-up"></i></button>
@@ -297,16 +327,41 @@
         <div class="container">
             <div class="header"><h1 class="title">Facilities</h1></div>
             <div class="contents">
-                <div class="card">lauda</div>
+                <div class="card">
+                    <img src="" alt="" class="card-img">
+                    <div class="info">
+                        <h3 class="card-heading">Improve your front-end skills by building projects</h3>
+                        <h5 class="card-des">Scan the QR code to visit Frontend Mentor and take your coding skills to the next level</h5>
+                    </div>
+                </div>
             </div>
-            <div class="contents"></div>
-            <div class="contents"></div>
-            <div class="contents"></div>
-            <div class="contents"></div>
-            <div class="contents"></div>
-            <div class="contents"></div>
-            <div class="contents"></div>
-            <div class="contents"></div>
+            <div class="contents">
+                <div class="card">
+                    <img src="" alt="" class="card-img">
+                    <div class="info">
+                        <h3 class="card-heading">Improve your front-end skills by building projects</h3>
+                        <h5 class="card-des">Scan the QR code to visit Frontend Mentor and take your coding skills to the next level</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="contents">
+                <div class="card">
+                    <img src="" alt="" class="card-img">
+                    <div class="info">
+                        <h3 class="card-heading">Improve your front-end skills by building projects</h3>
+                        <h5 class="card-des">Scan the QR code to visit Frontend Mentor and take your coding skills to the next level</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="contents">
+                <div class="card">
+                    <img src="" alt="" class="card-img">
+                    <div class="info">
+                        <h3 class="card-heading">Improve your front-end skills by building projects</h3>
+                        <h5 class="card-des">Scan the QR code to visit Frontend Mentor and take your coding skills to the next level</h5>
+                    </div>
+                </div>
+            </div>
         </div>  
         <div class="footer">
           <div class="footer-contents">
