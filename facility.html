@@ -247,9 +247,25 @@
             }
             .container{
                 display: grid;
-                height: 50rem;
                 background: red;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: .5fr 1fr 1fr 1fr;
+                grid-gap: 1rem;
+                place-items: center;
             }
+            .contents{
+                background: cyan;
+                height: 15rem;
+                width: 100%;
+            }
+            .header{
+                grid-column-start: 1;
+                grid-column-end: 4;
+            }
+            .title{
+                font-size: 3.2rem;
+            }
+            
             </style>
     </head>
     <body>
@@ -279,7 +295,18 @@
             <input type="button" value="Login" class="log_btn nohover" title="Login">
         </div>   
         <div class="container">
-
+            <div class="header"><h1 class="title">Facilities</h1></div>
+            <div class="contents">
+                <div class="card">lauda</div>
+            </div>
+            <div class="contents"></div>
+            <div class="contents"></div>
+            <div class="contents"></div>
+            <div class="contents"></div>
+            <div class="contents"></div>
+            <div class="contents"></div>
+            <div class="contents"></div>
+            <div class="contents"></div>
         </div>  
         <div class="footer">
           <div class="footer-contents">
