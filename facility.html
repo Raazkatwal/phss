@@ -295,11 +295,11 @@
             }
             .card-des{
             text-align: center;
-            font-size: 15px;
+            font-size: 1.5rem;
             font-weight: 400;
             color: var(--description-color);
             }
-            @media screen and (max-width:998px) {
+            @media screen and (max-width:998px){
               html{
                 font-size: 55%;
               }
@@ -315,15 +315,20 @@
                 grid-column-start: auto;
                 grid-column-end: auto;
                 place-content: center;
+              }
+              .footer{
+                display: none;
+              }
+              #myBtn{
+                width: 7.5rem;
+                height: 7.5rem;
+              }
             }
-            .footer{
-              display: none;
+            @media screen and (max-width:400px) {
+              html{
+                font-size: 40%;
+              }
             }
-            #myBtn{
-              width: 6.5rem;
-              height: 6.5rem;
-            }
-          }
         </style>
     </head>
     <body>
