@@ -297,6 +297,31 @@
             font-weight: 400;
             color: #777;
             }
+            @media screen and (max-width:998px) {
+              html{
+                font-size: 55%;
+              }
+              .navbar{
+                display: none;
+              }
+              .container{
+                width: 100%;
+                grid-template-columns: 100%;
+                grid-template-rows: 15rem 1fr 1fr 1fr 1fr;
+              }
+              .header{
+                grid-column-start: auto;
+                grid-column-end: auto;
+                place-content: center;
+            }
+            .footer{
+              display: none;
+            }
+            #myBtn{
+              width: 6.5rem;
+              height: 6.5rem;
+            }
+            }
         </style>
     </head>
     <body>
