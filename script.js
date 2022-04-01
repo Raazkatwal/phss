@@ -25,3 +25,10 @@ var toggle = document.getElementById("change"); //theme change garne icon lai li
           document.getElementById("change").innerHTML = "<i class='fa-solid fa-moon theme-logo'></i>";
         }
     }
+
+//responsive navbar part
+navbtn = document.getElementsByClassName("menu-btn")[0];//gets the btn and nav links
+navlinks = document.getElementsByClassName("ul")[0];
+navbtn.addEventListener('click', () => {
+  navlinks.classList.toggle('active'); //when button is clicked the active class is activated
+})
