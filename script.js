@@ -26,6 +26,16 @@ var toggle = document.getElementById("change"); //theme change garne icon lai li
         }
     }
 
+var restoggle = document.getElementById('res-toggle');
+restoggle.onclick = function(){ //click garda function call hunxa
+  document.body.classList.toggle("dark-theme"); //dark theme ma change hunxa
+  if (document.body.classList.contains("dark-theme")) {
+     document.getElementById("res-text").innerHTML = "On";
+  }else{
+    document.getElementById("res-text").innerHTML = "Off";
+  }
+}
+
 var navmenu = document.getElementsByClassName('menu-btn')[0];
 var navbar = document.getElementsByClassName('res-navbar')[0];
 navmenu.addEventListener('click', ()=>{
