@@ -26,9 +26,8 @@ var toggle = document.getElementById("change"); //theme change garne icon lai li
         }
     }
 
-//responsive navbar part
-navbtn = document.getElementsByClassName("menu-btn")[0];//gets the btn and nav links
-navlinks = document.getElementsByClassName("ul")[0];
-navbtn.addEventListener('click', () => {
-  navlinks.classList.toggle('active'); //when button is clicked the active class is activated
+var navmenu = document.getElementsByClassName('menu-btn')[0];
+var navbar = document.getElementsByClassName('res-navbar')[0];
+navmenu.addEventListener('click', ()=>{
+navbar.classList.toggle('active')
 })

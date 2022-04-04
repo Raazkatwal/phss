@@ -307,6 +307,13 @@
             font-weight: 400;
             color: var(--description-color);
             }
+            .res-navbar{
+              display: none;
+              font-size: 1.8rem;
+            }
+            .active{
+              display: block;
+            }
             @media screen and (max-width:998px){
               html{
                 font-size: 55%;
@@ -314,22 +321,24 @@
               .nohover{
               pointer-events: none;
               }
+              .res-navbar{
+                margin-top: 1.8rem;
+                background-color: #afafaf;
+              }
+              .res-navbar ul li{
+                list-style: none;
+                text-align: center;
+                padding: 1.5rem;
+              }
+              .res-navbar ul li a{
+                text-decoration: none;
+                color: var(--secondary-color);
+              }
               .navbar .log_btn, .theme-logo{
                 display: none;
               }
-              .navbar ul{
+              .navbar ul, .navbar .log_btn{
                 display: none;
-                flex-direction: column;
-                flex: 3;
-                margin-top: 6rem;
-                font-size: 10rem;
-              }
-             
-              .navbar{
-                text-align: center;
-              }
-              .navbar ul.active{
-                display: flex;
               }
               .container{
                 width: 100%;
@@ -381,7 +390,16 @@
             <span id="change"><i class="fa-solid fa-moon theme-logo"></i></span>
             <i class="fa-solid fa-bars menu-btn"></i>
             <input type="button" value="Login" class="log_btn nohover" title="Login">
-        </div>   
+        </div>
+        <nav class="res-navbar">
+          <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">ADMISSION</a></li>
+            <li><a href="facility.html">FACILITY</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+          </ul>
+        </nav>   
         <div class="container">
             <div class="header"><h1 class="title">Facilities</h1></div>
             <div class="contents">
@@ -460,9 +478,6 @@
             <div style="color: white;">© Design And Developed By Raaz katwal. All Rights Reserved</div>
           </div>
           </div>
-    </body>
     <script src="script.js"></script>
-    </html></head>
-<body>
 </body>
 </html>
