@@ -39,5 +39,5 @@ restoggle.onclick = function(){ //click garda function call hunxa
 var navmenu = document.getElementsByClassName('menu-btn')[0];
 var navbar = document.getElementsByClassName('res-navbar')[0];
 navmenu.addEventListener('click', ()=>{
-navbar.classList.toggle('active')
+navbar.classList.toggle('navactive')
 })

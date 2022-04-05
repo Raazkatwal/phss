@@ -66,6 +66,14 @@
           position: relative;
           cursor: pointer;
         }
+        .menu-btn{
+          position: absolute;
+          right: 1.6rem;
+          color: var(--secondary-color);
+          top: 3rem;
+          display: none;
+          font-size: 3rem;
+        }
         /* The container <div> - needed to position the dropdown content */
         .dropdown {
         position: relative;
@@ -336,6 +344,71 @@
           color: var(--accent-color);
           font-size: 2.5rem;
         }
+        .res-navbar{
+          display: none;
+          font-size: 1.8rem;
+        }
+        .navactive{
+          display: block;
+        }
+        @media screen and (max-width:998px){
+          html{
+            font-size: 55%;
+          }
+          .nohover{
+          pointer-events: none;
+          }
+          .res-navbar{
+            margin-top: 1.8rem;
+            background-color: #afafaf;
+          }
+          .res-navbar ul li{
+            list-style: none;
+            text-align: center;
+            padding: 1.5rem;
+            color: var(--secondary-color);
+          }
+          .res-navbar ul li a{
+            text-decoration: none;
+            color: var(--secondary-color);
+          }
+          .navbar .log_btn, .theme-logo{
+            display: none;
+          }
+          .navbar ul, .navbar .log_btn{
+            display: none;
+          }
+          .footer{
+            display: none;
+          }
+          .menu-btn{
+            display: block;
+          }
+          .container{
+            display: flex;
+            flex-direction: column;
+            place-items: center;
+          }
+          .contactform{
+            margin-top: 1.5rem;
+          }
+          iframe{
+            width: 100%;
+          }
+        }
+        @media screen and (max-width:550px) {
+          .contactinfo{
+            flex-direction: column;
+          }
+          .infos{
+            margin: 0 0 8rem 0;
+          }
+        }
+        @media screen and (min-width: 998px) {
+         .res-navbar{
+           display: none;
+         }
+        }
         </style>
 </head>
 <body>
@@ -362,8 +435,19 @@
             <li><a href="contact.html"><button class="active">CONTACT</button></a></li>
         </ul>
         <span id="change"><i class="fa-solid fa-moon theme-logo"></i></span>
+        <i class="fa-solid fa-bars menu-btn"></i>
         <input type="button" value="Login" class="log_btn nohover" title="Login">
     </div>
+    <nav class="res-navbar">
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="#">ADMISSION</a></li>
+        <li><a href="facility.html">FACILITY</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+        <li id="res-toggle">Dark mode: <span id="res-text">Off</span></li>
+      </ul>
+    </nav> 
     <div class="container">
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3571.203139293172!2d87.28009821466128!3d26.481403483315187!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ef740cb01e8963%3A0x3b9d3c928f9112e0!2sPokhariya%20Secondary%20School!5e0!3m2!1sen!2snp!4v1648462568152!5m2!1sen!2snp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       <div class="contactform">
