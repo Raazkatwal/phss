@@ -317,6 +317,11 @@
             .nav{
               display: block;
             }
+            .nav-img{
+              display: none;
+              position: absolute;
+              left: 5%;
+            }
             @media screen and (max-width:998px){
               html{
                 font-size: 55%;
@@ -324,19 +329,22 @@
               .nohover{
               pointer-events: none;
               }
+              .nav-img{
+                display: block;
+              }
               .res-navbar{
-                margin-top: 1.8rem;
+                margin-top: 5rem;
                 background-color: #afafaf;
               }
               .res-navbar ul li{
                 list-style: none;
                 text-align: center;
                 padding: 1.5rem;
-                color: var(--secondary-color);
+                color: black;
               }
               .res-navbar ul li a{
                 text-decoration: none;
-                color: var(--secondary-color);
+                color: black;
               }
               .navbar .log_btn, .theme-logo{
                 display: none;
@@ -376,7 +384,8 @@
     <body>
         <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa-solid fa-angle-up"></i></button>
         <div class="navbar">
-            <ul class="ul">
+          <img src="https://manager.pokhariyaschool.edu.np/uploads/pokhariyaschool/logo/logo.jpg" width="15%" height="auto" class="nav-img">
+            <ul>
                 <li><a href="index.html"><button class="btn">HOME</button></a></li>
                 <div class="dropdown">
                     <button class="dropbtn btn">ABOUT <i class="fa fa-angle-down"></i></button>
