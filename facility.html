@@ -178,7 +178,7 @@
             }
             .footer-contents{
               display: grid;
-              grid-template-columns: 38% 30% 32%;
+              grid-template-columns: 1.5fr 1fr 1.5fr;
               color: white;
             }
             .footer_sch_info > .fa-solid{
@@ -189,6 +189,9 @@
             }
             .footer_sch_info{
               margin-left: 10%;
+            }
+            .footer-subscribe{
+              margin-right: 5%;
             }
             .divider-2{
               width: 95%;
@@ -362,7 +365,26 @@
                 grid-column-end: auto;
                 place-content: center;
               }
-              .footer{
+              .footer, .credit-btns i{
+                font-size: 2rem;
+              }
+              .footer-contents{
+                display: flex;
+                flex-direction: column;
+              }
+              .footer-contents{
+                place-items: center;
+              }
+              .footer_sch_info{
+                display: none;
+              }
+              .footer_sch_info img {
+                display: block;
+              }
+              .footer-subscribe{
+                display: none;
+              }
+              .footer-nav h1, .footer-nav span{
                 display: none;
               }
               .menu-btn{
@@ -384,7 +406,7 @@
     <body>
         <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa-solid fa-angle-up"></i></button>
         <div class="navbar">
-          <img src="https://manager.pokhariyaschool.edu.np/uploads/pokhariyaschool/logo/logo.jpg" width="15%" height="auto" class="nav-img">
+          <a href="index.html"><img src="https://manager.pokhariyaschool.edu.np/uploads/pokhariyaschool/logo/logo.jpg" width="15%" height="auto" class="nav-img"></a>
             <ul>
                 <li><a href="index.html"><button class="btn">HOME</button></a></li>
                 <div class="dropdown">
@@ -470,11 +492,11 @@
             <h1>Useful links</h1>
             <span class="footer-divider"></span>
             <ul style="list-style: none;">
-              <li><a href="#"class="nohover"><i class="fa fa-angle-right"></i> Home</a></li>
-              <li><a href="#"class="nohover"><i class="fa fa-angle-right"></i> About us</a></li>
-              <li><a href="#"class="nohover"><i class="fa fa-angle-right"></i> Facilities</a></li>
-              <li><a href="#"class="nohover"><i class="fa fa-angle-right"></i> Events</a></li>
-              <li><a href="contact.html"class="nohover"><i class="fa fa-angle-right"></i> Contact</a></li>
+              <li><a href="index.html"><i class="fa fa-angle-right"></i> Home</a></li>
+              <li><a href="#"><i class="fa fa-angle-right"></i> About us</a></li>
+              <li><a href="facility.html"><i class="fa fa-angle-right"></i> Facilities</a></li>
+              <li><a href="#"><i class="fa fa-angle-right"></i> Events</a></li>
+              <li><a href="contact.html"><i class="fa fa-angle-right"></i> Contact</a></li>
             </ul>
           </div>
           <div class="footer-subscribe">
@@ -494,7 +516,7 @@
               <button class="social-btns nohover"><i class="fa-brands fa-instagram"></i></button>
               <button class="social-btns nohover"><i class="fa-brands fa-youtube"></i></button>
             </div>
-            <div style="color: white;">© Design And Developed By Raaz katwal. All Rights Reserved</div>
+            <div style="color: white; padding-bottom: 1rem;">© Design And Developed By Raaz katwal. All Rights Reserved</div>
           </div>
           </div>
     <script src="script.js"></script>
