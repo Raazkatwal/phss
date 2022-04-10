@@ -4,7 +4,7 @@
 }
 html{
   font-size: 62.5%;
-  font-family: ubuntu;
+  font-family: sans-serif;
   /* it makes 1rem=10px=62.5%. By defalut 1rem=16px=100% and 62.5%=10px */
   /* h1=3.2rem
   h2=2.4rem
@@ -178,6 +178,60 @@ body{
   display: none;
   font-size: 3rem;
 }
+.modal{
+  background-color: white;
+  height: 35rem;
+  width: 40rem;
+  box-shadow: .8rem .8rem 1.9rem 0px var(--accent-color);
+  border: none;
+  position: fixed;
+  margin: auto;
+}
+.modal::backdrop{
+  background: rgba(0, 0, 0, .5);
+}
+.login-form{
+  padding-top: 2rem;
+}
+.login-form-btn{
+  background: transparent;
+  border: 2px solid var(--accent-color);
+  border-radius: 2px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+  width: 100px;
+  height: 30px;
+  padding: 5px 10px;
+  text-transform: uppercase;
+  color: black;
+  text-align: center;
+  margin-left: 35%;
+  margin-top: 5%;
+  transition: .8s;
+}
+.login-form-btn:hover{
+  color: white;
+  box-shadow: inset 100px 0 0 0 var(--accent-color);
+}
+.name{
+  margin-left: 40%;
+  text-transform: uppercase;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: bold;
+  font-size: large;
+  letter-spacing: .5rem;
+  color: black;
+}
+.pass, .mail{
+  padding: 1rem 1rem 1rem 1rem;
+  margin: 1.5rem 1rem 1.5rem 15%;
+  border:none;
+  font-size: 16px;
+  border-bottom: 2px solid #333;
+  outline: none;
+  width: 25rem;
+} 
 @media screen and (max-width:998px) {
     html{
       font-size: 55%;

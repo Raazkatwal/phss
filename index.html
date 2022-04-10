@@ -114,9 +114,7 @@
           border-radius: 5rem;
           color: var(--primary-color);
           text-transform: uppercase;
-        }
-        .log_btn:hover{
-          cursor: not-allowed;
+          cursor: pointer;
         }
         .fa-solid{
           font-size: 2rem;
@@ -257,6 +255,15 @@
         <span id="change"><i class="fa-solid fa-moon theme-logo"></i></span>
         <input type="button" value="Login" class="log_btn nohover" title="Login">
     </div>
+    <dialog class="modal">
+      <form class="login-form">
+          <span class="name">Login</span>
+          <input type="email" class="mail" placeholder="E-mail" required><br>
+          <input type="password" class="pass" placeholder="Password" required>
+          <input type="submit" value="Login" class="login-form-btn nohover">
+          <input type="button" value="Close" class="login-form-btn nohover login-close-btn">
+      </form>
+    </dialog>
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">

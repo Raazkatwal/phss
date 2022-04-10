@@ -96,9 +96,7 @@
               border-radius: 5rem;
               color: var(--primary-color);
               text-transform: uppercase;
-            }
-            .log_btn:hover{
-              cursor: not-allowed;
+              cursor: pointer;
             }
             .container{
                 display: grid;
@@ -213,7 +211,16 @@
             <li><a href="contact.html">CONTACT</a></li>
             <li id="res-toggle">Dark mode: <span id="res-text">Off</span></li>
           </ul>
-        </nav>   
+        </nav>
+        <dialog class="modal">
+          <form class="login-form">
+              <span class="name">Login</span>
+              <input type="email" class="mail" placeholder="E-mail" required><br>
+              <input type="password" class="pass" placeholder="Password" required>
+              <input type="submit" value="Login" class="login-form-btn nohover">
+              <input type="button" value="Close" class="login-form-btn nohover login-close-btn">
+          </form>
+        </dialog>
         <div class="container">
             <div class="header"><h1 class="title">Facilities</h1></div>
             <div class="contents">

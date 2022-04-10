@@ -41,3 +41,13 @@ var navbar = document.getElementsByClassName('res-navbar')[0];
 navmenu.addEventListener('click', ()=>{
 navbar.classList.toggle('navactive')
 })
+
+loginbtn = document.querySelector('.log_btn');
+closebtn = document.querySelector('.login-close-btn');
+popup = document.querySelector('.modal');
+loginbtn.addEventListener("click", ()=>{
+popup.showModal();
+})
+closebtn.addEventListener('click', ()=>{
+  popup.close();
+})
