@@ -22,13 +22,52 @@ body{
 :root{
   --primary-color:white;
   --secondary-color: #151515;
-  --accent-color:#00B16A;
+  --accent-color:#fc4445;
   --description-color:#727272;
 }
 .dark-theme{
   --primary-color: #151515;
   --secondary-color: white;
   --description-color:#b6b3b3;
+}
+.nav{
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  height: auto;
+}
+.nav.scrollshade{
+  box-shadow: 0 0 1rem .3rem;
+}
+.icon{
+  cursor: pointer;
+  padding:0 2.5rem;
+}
+.nav ul{
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+.nav ul li {
+  list-style: none;
+}
+.nav ul li a{
+  text-decoration: none;
+  color: var(--secondary-color);
+  padding: 1.5rem 2.5rem;
+  display: block;
+  width: max-content;
+}
+.nav ul li a:hover{
+  background-color: var(--accent-color);
 }
 .fa-sun{
     color: var(--secondary-color);
@@ -147,34 +186,16 @@ body{
 .footer-credits{
   text-align: center;
 }
-.res-navbar{
-  font-size: 1.8rem;
-  height: 0;
-  opacity: 0;
-  position: relative;
-  right: -100rem;
-  transition: all .8s;
-  overflow: hidden;
-}
 .navactive{
   height: auto;
   opacity: 1;
   right: 0;
 }
-.nav{
-  display: block;
-}
-.nav-img{
-  display: none;
-  position: absolute;
-  left: 5%;
-  z-index: 10;
-}
 .menu-btn{
   position: absolute;
   right: 1.6rem;
   color: var(--secondary-color);
-  top: 3rem;
+  top: .5rem;
   display: none;
   font-size: 3rem;
 }
@@ -232,35 +253,15 @@ body{
   outline: none;
   width: 25rem;
 } 
+.nav-links.navactive{
+  display: flex;
+}
 @media screen and (max-width:998px) {
     html{
       font-size: 55%;
     }
     .nohover{
     pointer-events: none;
-    }
-    .nav-img{
-      display: block;
-    }
-    .res-navbar{
-      margin-top: 5rem;
-      background-color: #afafaf;
-    }
-    .res-navbar ul li{
-      list-style: none;
-      text-align: center;
-      padding: 1.5rem;
-      color: black;
-    }
-    .res-navbar ul li a{
-      text-decoration: none;
-      color: black;
-    }
-    .navbar .log_btn, .theme-logo{
-      display: none;
-    }
-    .navbar ul, .navbar .log_btn{
-      display: none;
     }
     .footer, .credit-btns i{
       font-size: 2rem;
@@ -287,9 +288,19 @@ body{
     .menu-btn{
       display: block;
     }
-}
-@media screen and (min-width: 998px) {
-    .res-navbar{
-      display: none;
+    nav{
+      flex-direction: column;
+      
     }
-  }
+    nav ul li {
+      text-align: center;
+    }
+    .nav ul{
+      display: none;
+      width: 100%;
+      flex-direction: column;
+    }
+    .icon{
+      transform: translateX(-50%);
+    }
+}

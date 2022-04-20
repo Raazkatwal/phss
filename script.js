@@ -7,8 +7,10 @@ window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
   if (document.documentElement.scrollTop > 20) {
     mybutton.style.display = "block";
+    document.querySelector('.nav').classList.add("scrollshade");
   } else {
     mybutton.style.display = "none";
+    document.querySelector('.nav').classList.remove("scrollshade");
   }
 }
 // When the user clicks on the button, scroll to the top of the document
@@ -20,27 +22,16 @@ var toggle = document.getElementById("change"); //theme change garne icon lai li
     toggle.onclick = function(){ //click garda function call hunxa
         document.body.classList.toggle("dark-theme"); //dark theme ma change hunxa
         if (document.body.classList.contains("dark-theme")) {
-           document.getElementById("change").innerHTML = "<i class='fa-solid fa-sun theme-logo'></i>"; //dark theme activate xa vane icon change hunxa
+           document.getElementById("text-change").innerHTML = "Light"; //dark theme activate xa vane icon change hunxa
         }else{
-          document.getElementById("change").innerHTML = "<i class='fa-solid fa-moon theme-logo'></i>";
+          document.getElementById("text-change").innerHTML = "Dark";
         }
     }
-
-var restoggle = document.getElementById('res-toggle');
-restoggle.onclick = function(){ //click garda function call hunxa
-  document.body.classList.toggle("dark-theme"); //dark theme ma change hunxa
-  if (document.body.classList.contains("dark-theme")) {
-     document.getElementById("res-text").innerHTML = "On";
-  }else{
-    document.getElementById("res-text").innerHTML = "Off";
-  }
-}
-
-var navmenu = document.getElementsByClassName('menu-btn')[0];
-var navbar = document.getElementsByClassName('res-navbar')[0];
-navmenu.addEventListener('click', ()=>{
-navbar.classList.toggle('navactive')
-})
+    const toggleButton = document.getElementsByClassName('fa-bars')[0]
+    const navbarLinks = document.getElementsByClassName('nav-links')[0]
+    toggleButton.addEventListener('click', () => {
+      navbarLinks.classList.toggle('navactive')
+    })
 
 loginbtn = document.querySelector('.log_btn');
 closebtn = document.querySelector('.login-close-btn');
