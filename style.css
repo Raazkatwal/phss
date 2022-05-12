@@ -22,7 +22,7 @@ body{
 :root{
   --primary-color:white;
   --secondary-color: #151515;
-  --accent-color:#fc4445;
+  --accent-color:#4dbf00;
   --description-color:#727272;
 }
 .dark-theme{
