@@ -18,15 +18,32 @@ function topFunction() {
   document.documentElement.scrollTop = 0;
 }
 
-var toggle = document.getElementById("change"); //theme change garne icon lai liyo
-    toggle.onclick = function(){ //click garda function call hunxa
-        document.body.classList.toggle("dark-theme"); //dark theme ma change hunxa
-        if (document.body.classList.contains("dark-theme")) {
-           document.getElementById("text-change").innerHTML = "Light"; //dark theme activate xa vane icon change hunxa
-        }else{
-          document.getElementById("text-change").innerHTML = "Dark";
-        }
-    }
+let darkmode = localStorage.getItem("darkmode");
+const toggle = document.getElementById("change"); 
+const enabledarkmode = () => {
+  document.body.classList.add('dark-theme');
+  localStorage.setItem('darkmode', 'enabled');
+};
+const disabledarkmode = () => {
+  document.body.classList.remove('dark-theme');
+  localStorage.setItem('darkmode', null);
+};
+if (darkmode == 'enabled') {
+  enabledarkmode();
+  document.getElementById("text-change").innerHTML = "Light";
+}
+toggle.addEventListener('click', ()=>{
+  darkmode = localStorage.getItem("darkmode");
+  if (darkmode !== "enabled") {
+    enabledarkmode();
+    document.getElementById("text-change").innerHTML = "Light";
+  }else{
+    disabledarkmode();
+    document.getElementById("text-change").innerHTML = "Dark";
+  }
+})
+
+
     const toggleButton = document.getElementsByClassName('fa-bars')[0]
     const navbarLinks = document.getElementsByClassName('nav-links')[0]
     toggleButton.addEventListener('click', () => {
