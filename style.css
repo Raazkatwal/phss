@@ -208,7 +208,7 @@ a{
   background-color: white;
   height: 35rem;
   width: 40rem;
-  box-shadow: .8rem .8rem 1.9rem 0px var(--accent-color);
+  box-shadow: .3rem .3rem .8rem 0 var(--accent-color);
   border: none;
   position: fixed;
   margin: auto;
